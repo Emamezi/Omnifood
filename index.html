@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The smart 365-days-per-year food subscription that will make you eat healthy again.Tailored to your personal tastes and nutritional needs.">
+  <link rel="icon" href="img/favicon copy.png">
+  <link rel="apple-touch-icon" href="img/favicon-apple-touch.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -13,7 +17,7 @@
 <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 <script defer src="js/script.js"></script>
-  <title>OmniFoods</title>
+  <title>OmniFoods &mdash; Never cook again</title>
 </head>
 <body>
   <header class="header">
@@ -55,7 +59,11 @@
           </div>
         </div>
         <div class="hero-img-box">
-          <img src="img/hero.png" alt="hero image" class="hero-img">
+          <picture>
+            <source srcset="img/hero.webp"type="image/webp">
+            <source srcset="img/hero-min.png"type="image/png">
+            <img src="img/hero-min.png" alt="hero image" class="hero-img">
+          </picture>
         </div>
       </div>
     </section>

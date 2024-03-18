@@ -1,13 +1,3 @@
-// console.log("helllo world");
-// const myName = "Emamezi Ebebeinwe";
-// const h1 = document.querySelector(".heading-primary");
-
-// h1.addEventListener("click", function () {
-//   h1.style.backgroundColor = "red";
-//   h1.textContent = myName;
-//   h1.style.padding = "5rem";
-// });
-
 // Updating current year
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
@@ -49,3 +39,22 @@ allLinks.forEach(function (link) {
       headerEl.classList.toggle("nav-open");
   });
 });
+
+// Sticky navigation
+const heroSectionEl = document.querySelector(".section-hero");
+const observer = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+    if (!ent.isIntersecting) document.body.classList.add("sticky");
+    else {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null, //where the element should be appearing (observe inside the viewport)
+    threshold: 0, //event will fire as soon as 0% of the hero section is in the viewport
+    rootMargin: "-80px",
+  }
+);
+observer.observe(heroSectionEl);
