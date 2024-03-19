@@ -194,6 +194,7 @@
   .btn:link,
   .btn:visited {
     padding: 2.4rem 1.6rem;
+    margin-bottom: 2rem;
   }
   .hero {
     padding: 0 3.2rem;
